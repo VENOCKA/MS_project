@@ -7,7 +7,7 @@ CREATE TABLE auteurs (
   email VARCHAR(250) NOT NULL
 );
  
-INSERT INTO users (username, password) VALUES
+INSERT INTO auteurs (name, password, email) VALUES
   ('Laurent', 'laurent','Laurent.laurent@gmail.com'),
   ('Sophie', 'sophie','sophie.sophie@gmail.com'),
   ('Agathe', 'agathe','agathe.agathe@gmail.com');
