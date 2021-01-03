@@ -66,6 +66,11 @@ public class RestAuteurController {
 			currentUser.setPassword(password);
 		}
 		
+		String email = auteur.getEmail();
+		if(password != null) {
+			currentUser.setEmail(email);
+		}
+		
 		currentUser = auteurRepository.save(currentUser);
 		return currentUser;
 	}
