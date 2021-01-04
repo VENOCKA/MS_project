@@ -17,7 +17,7 @@ public class AuteurProxy {
 	@Autowired
 	private CustomProperties props;
 
-	public Auteur getUser(int id) {
+	public Auteur getAuteur(int id) {
 
 		String getUserUrl = props.getApiUrl() + "/auteur/" + id;
 		ResponseEntity<Auteur> response = restTemplate.exchange(getUserUrl, HttpMethod.GET, null, Auteur.class);

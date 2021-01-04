@@ -1,22 +1,17 @@
-package ynov.project.article.model;
+package ynov.project.article.dto;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
-public class Article {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+import ynov.project.article.model.Auteur;
+
+public class ArticleR {
+
 	private Integer id;
 	
 	private String categorie;
 	
-	private String auteur;
+	private Auteur auteur;
 	
 	private Date date;
 	
@@ -24,11 +19,11 @@ public class Article {
 	
 	private int idCommentaire;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -40,11 +35,11 @@ public class Article {
 		this.categorie = categorie;
 	}
 
-	public String getAuteur() {
+	public Auteur getAuteur() {
 		return auteur;
 	}
 
-	public void setAuteur(String auteur) {
+	public void setAuteur(Auteur auteur) {
 		this.auteur = auteur;
 	}
 
@@ -71,5 +66,4 @@ public class Article {
 	public void setIdCommentaire(int idCommentaire) {
 		this.idCommentaire = idCommentaire;
 	}
-
 }

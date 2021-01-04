@@ -1,11 +1,11 @@
-package ynov.project.auteur.controller;
+package ynov.project.article.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class AuteurController {
-	
+public class ArticleController {
+
 	@GetMapping("/")
 	public String home() {
 		
