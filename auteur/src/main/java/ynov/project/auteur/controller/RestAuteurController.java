@@ -1,5 +1,7 @@
 package ynov.project.auteur.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import ynov.project.auteur.model.Auteur;
 import ynov.project.auteur.repositories.AuteurRepository;
@@ -32,6 +33,15 @@ public class RestAuteurController {
 		Iterable<Auteur> auteurs = auteurRepository.findAll();
 		System.out.println("trace");
 		return auteurs;
+	}
+	
+	
+	@GetMapping("/auteur/{id}")
+	public Optional<Auteur> getUser(@PathVariable("id") int id) {
+		
+		Optional<Auteur> user = auteurRepository.findById(id);
+		return user;
+		
 	}
 	
 	
